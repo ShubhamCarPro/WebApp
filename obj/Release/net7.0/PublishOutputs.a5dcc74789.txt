@@ -1,0 +1,7 @@
+F:\Jenkins\WebApp\bin\Release\net7.0\publish\WebApp.exe
+F:\Jenkins\WebApp\bin\Release\net7.0\publish\appsettings.Development.json
+F:\Jenkins\WebApp\bin\Release\net7.0\publish\appsettings.json
+F:\Jenkins\WebApp\bin\Release\net7.0\publish\WebApp.dll
+F:\Jenkins\WebApp\bin\Release\net7.0\publish\WebApp.deps.json
+F:\Jenkins\WebApp\bin\Release\net7.0\publish\WebApp.runtimeconfig.json
+F:\Jenkins\WebApp\bin\Release\net7.0\publish\WebApp.pdb

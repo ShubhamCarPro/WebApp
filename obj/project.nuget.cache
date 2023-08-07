@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "1QKh9CmioqkNDtQA1Pn7Ljwkt74eqJbZjCG/Hx1VnV+j0EtwOYdP+VMel+AeLB3SHeLD/nYpcvZba7U8xbunKA==",
+  "success": true,
+  "projectFilePath": "F:\\Jenkins\\WebApp\\WebApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\VersionR\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\7.0.9\\microsoft.netcore.app.runtime.win-x64.7.0.9.nupkg.sha512",
+    "C:\\Users\\VersionR\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\7.0.9\\microsoft.windowsdesktop.app.runtime.win-x64.7.0.9.nupkg.sha512",
+    "C:\\Users\\VersionR\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\7.0.9\\microsoft.aspnetcore.app.runtime.win-x64.7.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}
