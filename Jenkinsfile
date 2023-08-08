@@ -26,7 +26,7 @@ pipeline {
             
             steps {
                 
-                echo "Deployed on IIS Successfully"
+                echo "Deployed on IIS Server Successfully"
             
             }
         }
