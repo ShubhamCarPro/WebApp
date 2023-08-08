@@ -43,6 +43,7 @@ node {
       bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll begin /k:\"WebApp-Project\""
       bat "dotnet build"
       bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll end"
+      echo "Test Completed"
     }
   }
 }
