@@ -43,6 +43,7 @@ node {
     withSonarQubeEnv() {
       bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" begin /k:\"WebApp-Project\""
       bat "\"${msbuildHome}\\MSBuild.exe\" /t:Rebuild"
+      echo "Done"
       bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" end"
     }
   }
