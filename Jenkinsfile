@@ -18,7 +18,7 @@ pipeline {
             steps {
                 def scannerHome = tool 'SonarScanner for MSBuild'
                 withSonarQubeEnv() {
-                    bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll begin /F:\Jenkins\DeclarativePipeline""
+                    bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll begin /F:\"Jenkins\DeclarativePipeline""
                     bat "dotnet build"
                     bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll end"
                 }
