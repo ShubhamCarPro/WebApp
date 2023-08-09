@@ -1,4 +1,4 @@
-pipeline {
+/*pipeline {
     
     agent any
 
@@ -31,7 +31,7 @@ pipeline {
             }
         }
     }
-}
+}*/
 
 /*node {
   stage('SCM') {
@@ -48,3 +48,17 @@ pipeline {
     }
   }
 }*/
+
+node {
+  stage('SCM') {
+    checkout scm
+  }
+  stage('SonarQube Analysis') {
+    def scannerHome = tool 'SonarQubeMSBuild'
+    withSonarQubeEnv() {
+      bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll begin /k:\"WebApp-Project\""
+      bat "dotnet build"
+      bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll end"
+    }
+  }
+}
