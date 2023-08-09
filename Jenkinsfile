@@ -1,4 +1,4 @@
-pipeline {
+/*pipeline {
     
     agent any
 
@@ -43,7 +43,7 @@ dotnet sonarscanner end /d:sonar.login="sqa_220a8f17bc785d41a3534315c82e41cc24f5
             }
         }
     }
-}
+}*/
 
 /*node {
   stage('SCM') {
@@ -60,7 +60,7 @@ dotnet sonarscanner end /d:sonar.login="sqa_220a8f17bc785d41a3534315c82e41cc24f5
     }
   }
 }*/
-/*node {
+node {
   stage('SCM') {
     checkout scm
   }
@@ -72,4 +72,4 @@ dotnet sonarscanner end /d:sonar.login="sqa_220a8f17bc785d41a3534315c82e41cc24f5
       bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll end"
     }
   }
-}*/
+}
