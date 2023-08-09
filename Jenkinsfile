@@ -1,4 +1,4 @@
-/*pipeline {
+pipeline {
     
     agent any
 
@@ -15,6 +15,23 @@
 
         stage('Build and Test Stage') {
 
+            steps {
+
+                echo "Building and Testing Project on Local"
+                environment {
+                    scannerHome = tool 'SonarQubeMSBuild'
+                }
+                stage('SonarQube Analysis') {
+
+                    withSonarQubeEnv(SonarQube) {
+                      bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll begin /k:\"WebApp-Project\""
+                      bat "dotnet build"
+                      bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll end"
+                    }
+                }
+            }
+        /*stage('Build and Test Stage') {
+
             steps{
 
                 echo "Building and Testing Project on Local"
@@ -23,7 +40,7 @@ dotnet sonarscanner begin /k:"WebApp-Project" /d:sonar.host.url="http://localhos
 dotnet build
 dotnet sonarscanner end /d:sonar.login="sqa_220a8f17bc785d41a3534315c82e41cc24f558bb"'''
             }
-        }
+        }*/
         
         stage('Deploy Stage') {
 
@@ -43,7 +60,7 @@ dotnet sonarscanner end /d:sonar.login="sqa_220a8f17bc785d41a3534315c82e41cc24f5
             }
         }
     }
-}*/
+}
 
 /*node {
   stage('SCM') {
@@ -60,7 +77,7 @@ dotnet sonarscanner end /d:sonar.login="sqa_220a8f17bc785d41a3534315c82e41cc24f5
     }
   }
 }*/
-node {
+/*node {
   stage('SCM') {
     checkout scm
   }
@@ -72,4 +89,4 @@ node {
       bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll end"
     }
   }
-}
+}*/
