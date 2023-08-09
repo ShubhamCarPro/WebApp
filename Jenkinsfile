@@ -13,11 +13,18 @@ pipeline {
             }
         }
 
+        stage('SCM') {
+            
+            steps{
+                
+                checkout scm
+            }
+        }
+
         stage('Build and Test Stage') {
 
             steps {
 
-                checkout scm
                 def scannerHome = tool 'SonarQubeMSBuild'
                 withSonarQubeEnv() {
                   bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll begin /k:\"WebApp-Project\""
