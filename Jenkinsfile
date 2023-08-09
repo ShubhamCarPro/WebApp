@@ -13,7 +13,7 @@ pipeline {
             }
         }
 
-        stage('Build and Test Stage') {
+        /*stage('Build and Test Stage') {
 
             environment {
                     scannerHome = tool 'SonarQubeMSBuild'
@@ -28,8 +28,8 @@ pipeline {
                     bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll end"
                 }
             }
-        }
-        /*stage('Build and Test Stage') {
+        }*/
+        stage('Build and Test Stage') {
 
             steps{
 
@@ -39,7 +39,7 @@ dotnet sonarscanner begin /k:"WebApp-Project" /d:sonar.host.url="http://localhos
 dotnet build
 dotnet sonarscanner end /d:sonar.login="sqa_220a8f17bc785d41a3534315c82e41cc24f558bb"'''
             }
-        }*/
+        }
         
         stage('Deploy Stage') {
 
