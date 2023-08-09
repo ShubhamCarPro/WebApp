@@ -1,4 +1,4 @@
-/*pipeline {
+pipeline {
     
     agent any
 
@@ -31,9 +31,9 @@
             }
         }
     }
-}*/
+}
 
-node {
+/*node {
   stage('SCM') {
     checkout scm
   }
@@ -47,4 +47,4 @@ node {
       bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" end"
     }
   }
-}
+}*/
