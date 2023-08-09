@@ -18,9 +18,10 @@ pipeline {
             steps {
 
                 echo "Building and Testing Project on Local"
-                bat '''dotnet sonarscanner begin /k:"test" /d:sonar.host.url="http://localhost:9000" /d:sonar.login="sqp_cd8b31cc58daab7dc2d1ac7002e783332775af0c"
-                    dotnet build
-                    dotnet sonarscanner end /d:sonar.login="sqp_cd8b31cc58daab7dc2d1ac7002e783332775af0c"'''   
+                bat '''dotnet tool install --global dotnet-sonarscanner
+dotnet sonarscanner begin /k:"WebApp-Project" /d:sonar.host.url="http://localhost:9000"  /d:sonar.login="sqp_a270280e3d944c8359fce4253c0d8e48508d8afe"
+dotnet build
+dotnet sonarscanner end /d:sonar.login="sqp_a270280e3d944c8359fce4253c0d8e48508d8afe"'''
             }
         }
         
