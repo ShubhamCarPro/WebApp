@@ -15,12 +15,14 @@ pipeline {
 
         stage('Build and Test Stage') {
 
+            environment {
+                    scannerHome = tool 'SonarQubeMSBuild'
+                }
+
             steps {
 
                 echo "Building and Testing Project on Local"
-                environment {
-                    scannerHome = tool 'SonarQubeMSBuild'
-                }
+                
                 stage('SonarQube Analysis') {
 
                     withSonarQubeEnv(SonarQube) {
