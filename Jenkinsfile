@@ -30,6 +30,7 @@ pipeline {
                     }
                 }
             }
+        }
         /*stage('Build and Test Stage') {
 
             steps{
