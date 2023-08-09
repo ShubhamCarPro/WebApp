@@ -60,17 +60,3 @@ dotnet sonarscanner end /d:sonar.login="sqp_a270280e3d944c8359fce4253c0d8e48508d
     }
   }
 }*/
-
-/*node {
-  stage('SCM') {
-    checkout scm
-  }
-  stage('SonarQube Analysis') {
-    def scannerHome = tool 'SonarQubeMSBuild'
-    withSonarQubeEnv() {
-      bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll begin /k:\"WebApp-Project\""
-      bat "dotnet build"
-      bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll end"
-    }
-  }
-}*/
