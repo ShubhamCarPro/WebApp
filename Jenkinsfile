@@ -57,10 +57,10 @@ dotnet sonarscanner end /d:sonar.login="sqp_a270280e3d944c8359fce4253c0d8e48508d
                 
                 echo "Deployed on IIS Server Successfully"
             
-            }
+            }*/
         }
     }
-}*/
+}
 
 /*node {
   stage('SCM') {
