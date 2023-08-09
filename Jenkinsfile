@@ -54,11 +54,11 @@ node {
     checkout scm
   }
   stage('SonarQube Analysis') {
-    def scannerHome = tool 'SonarQubeMSBuild'
+    def scannerHome = tool 'SonarScanner for MSBuild'
     withSonarQubeEnv() {
-      bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll begin /k:\"WebApp-Project\""
+      bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.Common.dll begin /k:\"WebApp-Project\""
       bat "dotnet build"
-      bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll end"
+      bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.Common.dll end"
     }
   }
 }
