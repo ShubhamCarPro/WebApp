@@ -16,23 +16,6 @@ pipeline {
         stage('Build and Test Stage') {
 
             environment {
-                    scannerHome = tool 'SonarQubeMSBuild'
-                }
-
-            steps {
-
-                echo "Building and Testing Project on Local"
-                withSonarQubeEnv('SonarQube') {
-                    bat '''dotnet ${scannerHome}\\\\SonarScanner.MSBuild.dll begin /k:\\"test\\" /d:sonar.host.url="http://localhost:9000"
-dotnet build
-dotnet ${scannerHome}\\\\SonarScanner.MSBuild.dll end'''
-                }
-            }
-        }
-
-        /*stage('Build and Test Stage') {
-
-            environment {
                 scannerHome = tool 'SonarQubeMSBuild'
             }
             
@@ -41,12 +24,12 @@ dotnet ${scannerHome}\\\\SonarScanner.MSBuild.dll end'''
                 echo "Building and Testing Project"
                 withSonarQubeEnv ('SonarQube') {
                     bat '''dotnet tool install --global dotnet-sonarscanner
-                    dotnet sonarscanner begin /k:"WebApp-Project" /d:sonar.host.url="http://localhost:9000
+                    dotnet sonarscanner begin /k:"WebApp-Project" /d:sonar.host.url="http://localhost:9000"
                     dotnet build
                     dotnet sonarscanner end'''
                 }
             }
-        }*/
+        }
         
         stage('Deploy Stage') {
 
