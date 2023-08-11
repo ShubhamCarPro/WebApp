@@ -29,15 +29,22 @@ pipeline {
                 }
             }
         }*/
+
         stage('Build and Test Stage') {
 
+            environment {
+                scannerHome = tool 'SonarQubeMSBuild'
+            }
+            
             steps{
 
                 echo "Building and Testing Project on Local"
-                bat '''dotnet tool install --global dotnet-sonarscanner
-dotnet sonarscanner begin /k:"WebApp-Project" /d:sonar.host.url="http://localhost:9000 /d:sonar.login="sqa_220a8f17bc785d41a3534315c82e41cc24f558bb"
-dotnet build
-dotnet sonarscanner end /d:sonar.login="sqa_220a8f17bc785d41a3534315c82e41cc24f558bb"'''
+                withSonarQubeEnv ('SonarQube') {
+                    bat '''dotnet tool install --global dotnet-sonarscanner
+                    dotnet sonarscanner begin /k:"WebApp-Project" /d:sonar.host.url="http://localhost:9000
+                    dotnet build
+                    dotnet sonarscanner end'''
+                }
             }
         }
         
