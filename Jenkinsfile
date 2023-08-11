@@ -23,9 +23,9 @@ pipeline {
 
                 echo "Building and Testing Project on Local"
                 withSonarQubeEnv('SonarQube') {
-                    bat '''dotnet ${scannerHome}\\\\SonarScanner.MSBuild.dll begin /k:\\"WebApp-Project\\
-                    dotnet build
-                    dotnet ${scannerHome}\\\\SonarScanner.MSBuild.dll end'''
+                    bat '''dotnet ${scannerHome}\\\\SonarScanner.MSBuild.dll begin /k:\\"test\\" /d:sonar.host.url="http://localhost:9000"
+dotnet build
+dotnet ${scannerHome}\\\\SonarScanner.MSBuild.dll end'''
                 }
             }
         }
