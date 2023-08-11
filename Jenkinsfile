@@ -22,7 +22,7 @@ pipeline {
             steps {
 
                 echo "Building and Testing Project on Local"
-                withSonarQubeEnv(SonarQube) {
+                withSonarQubeEnv('SonarQube') {
                     bat '''dotnet ${scannerHome}\\\\SonarScanner.MSBuild.dll begin /k:\\"WebApp-Project\\
                     dotnet build
                     dotnet ${scannerHome}\\\\SonarScanner.MSBuild.dll end'''
