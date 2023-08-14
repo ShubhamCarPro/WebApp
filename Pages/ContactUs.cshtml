@@ -4,14 +4,29 @@
     ViewData["Title"] = "Contact Us";
 }
 <h1>@ViewData["Title"]</h1>
-<p>We appreciate your interest in Web App. Get answers to your questions.</p>
-<div>
-    <form>
-        <input type="text" id="fname" placeholder="First Name" required/>
-        <input type="text" id="lname" placeholder="Last Name" required/>
-        <input type="text" id="conNo" placeholder="Contact No." required/>
-        <input type="email" id="email" placeholder="Email ID" required/>
-        <input type="text" id="query" placeholder="Please enter your question" required/>
-        <input type="button" id="sbtBtn" name="Submit">
+<p>We appreciate your interest in Web App. Submit your queries and we'll get back to you.</p>
+<div class="frmDiv">
+    <form class="queFrm">
+        <label class="inForm">First Name</label>
+        <input type="text" id="fname" class="inForm" required/>
+        <label class="inForm">Last Name</label>
+        <input type="text" id="lname" class="inForm" required/>
+        <label class="inForm">Contact No.</label>
+        <input type="number" id="conNo" class="inForm" required/>
+        <label class="inForm">Email</label>
+        <input type="email" id="email" class="inForm" required/>
+        <label class="inForm">Message</label>
+        <input type="text" id="query" class="inForm" required/>
+        <input type="submit" id="sbtBtn" class="inForm" value="Send">
     </form>
 </div>
+<style>
+    .frmDiv .queFrm{
+        display: flex;
+        width: 100px;
+        height: 200px;
+        margin: 10%;
+        padding: 20%;
+        justify-content: center;
+    }
+</style>
