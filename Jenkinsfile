@@ -23,7 +23,8 @@ pipeline {
 
                 echo "Building and Testing Project"
                 withSonarQubeEnv ('SonarQube') {
-                    bat '''dotnet tool install --global dotnet-sonarscanner dotnet-coverage
+                    bat '''dotnet tool install --global dotnet-sonarscanner
+                    dotnet tool install --global dotnet-coverage
                     dotnet sonarscanner begin /k:"WebApp-Project" /d:sonar.host.url="http://localhost:9000" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
                     dotnet build
                     dotnet-coverage collect 'dotnet test' -f xml  -o 'coverage.xml'
