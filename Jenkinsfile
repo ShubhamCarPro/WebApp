@@ -45,6 +45,7 @@ pipeline {
             steps {
                 
                 echo "Deployed on IIS Server Successfully"
+                echo "SonarQube Results (http://localhost:9000/dashboard?id=WebApp-Project)"
             
             }
         }
