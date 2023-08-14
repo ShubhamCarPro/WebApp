@@ -1,0 +1,17 @@
+@page
+@model ContactUsModel
+@{
+    ViewData["Title"] = "Contact Us";
+}
+<h1>@ViewData["Title"]</h1>
+<p>We appreciate your interest in Web App. Get answers to your questions.</p>
+<div>
+    <form>
+        <input type="text" id="fname" placeholder="First Name" required/>
+        <input type="text" id="lname" placeholder="Last Name" required/>
+        <input type="text" id="conNo" placeholder="Contact No." required/>
+        <input type="email" id="email" placeholder="Email ID" required/>
+        <input type="text" id="query" placeholder="Please enter your question" required/>
+        <input type="button" id="sbtBtn" name="Submit">
+    </form>
+</div>
