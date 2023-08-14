@@ -27,7 +27,7 @@ pipeline {
                     dotnet tool install --global dotnet-coverage
                     dotnet sonarscanner begin /k:"WebApp-Project" /d:sonar.host.url="http://localhost:9000" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
                     dotnet build
-                    dotnet-coverage collect 'dotnet test' -f xml  -o 'coverage.xml'
+                    dotnet-coverage collect \'dotnet test\' -f xml -o \'coverage.xml\'
                     dotnet sonarscanner end'''
                 }
             }
