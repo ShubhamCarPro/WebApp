@@ -7,26 +7,62 @@
 <p>We appreciate your interest in Web App. Submit your queries and we'll get back to you.</p>
 <div class="frmDiv">
     <form class="queFrm">
-        <label class="inForm">First Name</label>
+        <label class="laForm">First Name</label>
         <input type="text" id="fname" class="inForm" required/>
-        <label class="inForm">Last Name</label>
+        <label class="laForm">Last Name</label>
         <input type="text" id="lname" class="inForm" required/>
-        <label class="inForm">Contact No.</label>
+        <label class="laForm">Contact No.</label>
         <input type="number" id="conNo" class="inForm" required/>
-        <label class="inForm">Email</label>
+        <label class="laForm">Email</label>
         <input type="email" id="email" class="inForm" required/>
-        <label class="inForm">Message</label>
+        <label class="laForm">Message</label>
         <input type="text" id="query" class="inForm" required/>
-        <input type="submit" id="sbtBtn" class="inForm" value="Send">
+        <input type="submit" id="sbtBtn" class="frmBtn" value="Send">
     </form>
 </div>
 <style>
+    .frmDiv{
+        display: block;
+        margin: 0%;
+        padding: 0%;
+        width: 500px;
+        height: 600px;
+    }
     .frmDiv .queFrm{
-        display: flex;
-        width: 100px;
-        height: 200px;
-        margin: 10%;
-        padding: 20%;
+        width: 100%;
+        height: 100%;
+        margin: 2px;
+        padding: 2px;
         justify-content: center;
+    }
+    .queFrm .inForm{
+        width: 70%;
+        margin: 2px 2px 2px 0px;
+        padding: 5px;
+        outline: none;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-color: aquamarine;
+        transition: 0.8s;
+    }
+    .queFrm .inForm:hover{
+        border-color: chartreuse;
+    }
+    .queFrm .laForm{
+        width: 100%;
+        margin: 2px 2px 2px 0px;
+        padding: 2px;
+    }
+    .queFrm .frmBtn{
+        width: 70%;
+        margin: 10px 0px;
+        padding: 5px;
+        background-color: aquamarine;
+        transition: 0.8s;
+        border: none;
+    }
+    .queFrm .frmBtn:hover{
+        background-color: chartreuse;
     }
 </style>
