@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Jenkins\\WebApp\\WebApp.csproj": {}
+    "f:\\Jenkins\\WebApp\\WebApp.csproj": {}
   },
   "projects": {
-    "F:\\Jenkins\\WebApp\\WebApp.csproj": {
+    "f:\\Jenkins\\WebApp\\WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Jenkins\\WebApp\\WebApp.csproj",
+        "projectUniqueName": "f:\\Jenkins\\WebApp\\WebApp.csproj",
         "projectName": "WebApp",
-        "projectPath": "F:\\Jenkins\\WebApp\\WebApp.csproj",
+        "projectPath": "f:\\Jenkins\\WebApp\\WebApp.csproj",
         "packagesPath": "C:\\Users\\VersionR\\.nuget\\packages\\",
-        "outputPath": "F:\\Jenkins\\WebApp\\obj\\",
+        "outputPath": "f:\\Jenkins\\WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\VersionR\\AppData\\Roaming\\NuGet\\NuGet.Config"

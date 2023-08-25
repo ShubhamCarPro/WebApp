@@ -17,9 +17,24 @@
         <input type="email" id="email" class="inForm" required/>
         <label class="laForm">Message</label>
         <input type="text" id="query" class="inForm" required/>
-        <input type="submit" id="sbtBtn" class="frmBtn" value="Send">
+        <input type="submit" id="sbtBtn" class="frmBtn" onclick="sbtAlert()" value="Send">
     </form>
 </div>
+<script>
+function sbtAlert() {
+    var fname = document.getElementById("fname").value;
+    var lname = document.getElementById("lname").value;
+    var num = document.getElementById("conNo").value;
+    var email = document.getElementById("email").value;
+    var msg = document.getElementById("query").value;
+    if(fname != '' && lname != '' && num != '' && email != '' && msg != ''){
+        alert("Your Query is Submitted. \nThank You!!");
+    }
+    else{
+        alert("Please provide valid info");
+    }
+}
+</script>
 <style>
     .frmDiv{
         display: block;
