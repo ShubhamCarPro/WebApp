@@ -16,7 +16,7 @@ pipeline {
         stage('Build and Test Stage') {
 
             environment {
-                scannerHome = tool 'SonarQubeMSBuild'
+                scannerHome = tool 'SonarQube.NetCore'
             }
             
             steps{
